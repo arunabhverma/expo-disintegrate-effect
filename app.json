@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "expo-over-keyboard-view",
-    "slug": "expo-over-keyboard-view",
+    "name": "expo-disintegrate-effect",
+    "slug": "expo-disintegrate-effect",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -9,7 +9,8 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.arunabhverma.expooverkeyboardview"
     },
     "android": {
       "adaptiveIcon": {
@@ -19,7 +20,11 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.arunabhverma.expooverkeyboardview"
     },
     "web": {
       "output": "static",
@@ -27,6 +32,12 @@
     },
     "plugins": [
       "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ],
       [
         "expo-splash-screen",
         {
